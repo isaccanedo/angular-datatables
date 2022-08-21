@@ -1,0 +1,20 @@
+<ng-template #preview>
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of persons">
+        <td>{{ person.id }}</td>
+        <td>{{ person.firstName }}</td>
+        <td>{{ person.lastName }}</td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>
+<app-base-demo [pageTitle]="pageTitle" [mdIntro]="mdIntro" [mdHTML]="mdHTML" [mdTS]="mdTS" [template]="preview">
+</app-base-demo>
